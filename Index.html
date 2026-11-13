@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Project files, programs, and documentation.">
+  <title>Project Downloads</title>
+
+  <style>
+    :root {
+      --navy: #10243a;
+      --blue: #2463eb;
+      --light: #f4f7fb;
+      --text: #263445;
+      --muted: #637387;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--light);
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .nav-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 18px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      color: var(--white);
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 22px;
+    }
+
+    nav a {
+      color: #dbe7f5;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover,
+    nav a:focus {
+      color: var(--white);
+      text-decoration: underline;
+    }
+
+    .hero {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 54px 24px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 42px;
+    }
+
+    .hero h1 {
+      margin: 0 0 14px;
+      color: var(--navy);
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      line-height: 1.15;
+    }
+
+    .hero p {
+      max-width: 520px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .hero img {
+      display: block;
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: 0 14px 35px rgb(16 36 58 / 14%);
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 10px 24px 64px;
+    }
+
+    .section-heading {
+      margin: 0 0 22px;
+      color: var(--navy);
+      font-size: 1.7rem;
+    }
+
+    .download-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .download-card {
+      padding: 26px;
+      background: var(--white);
+      border: 1px solid #e2e9f1;
+      border-radius: 14px;
+      box-shadow: 0 5px 18px rgb(16 36 58 / 5%);
+    }
+
+    .download-card h3 {
+      margin: 0 0 8px;
+      color: var(--navy);
+      font-size: 1.25rem;
+    }
+
+    .download-card p {
+      min-height: 52px;
+      margin: 0 0 20px;
+      color: var(--muted);
+    }
+
+    .download-button {
+      display: inline-block;
+      padding: 10px 16px;
+      border-radius: 8px;
+      background: var(--blue);
+      color: var(--white);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .download-button:hover,
+    .download-button:focus {
+      background: #174fc9;
+    }
+
+    footer {
+      padding: 22px 24px;
+      background: var(--navy);
+      color: #dbe7f5;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 760px) {
+      .nav-container {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        padding-top: 38px;
+      }
+
+      .hero img {
+        height: 240px;
+      }
+
+      .download-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .download-card p {
+        min-height: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="nav-container">
+      <a class="brand" href="#home">Project Hub</a>
+
+      <nav aria-label="Main menu">
+        <a href="#cad">CAD</a>
+        <a href="#programs">Programs</a>
+        <a href="#documentation">Documentation</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="home" aria-labelledby="page-title">
+    <div>
+      <h1 id="page-title">Project Downloads</h1>
+      <p>
+        Find the design files, program files, and documentation for this project.
+        Choose a section below to download the files you need.
+      </p>
+    </div>
+
+    <!-- Add your project image at images/project.jpg, or change this path. -->
+    <img src="images/project.jpg" alt="Photo of the project">
+  </section>
+
+  <main>
+    <h2 class="section-heading">Project files</h2>
+
+    <div class="download-grid">
+      <section class="download-card" id="cad">
+        <h3>CAD</h3>
+        <p>Download the CAD drawings and design files.</p>
+        <a class="download-button" href="files/cad-files.zip" download>
+          Download CAD files
+        </a>
+      </section>
+
+      <section class="download-card" id="programs">
+        <h3>Programs</h3>
+        <p>Download the project programs and source files.</p>
+        <a class="download-button" href="files/programs.zip" download>
+          Download programs
+        </a>
+      </section>
+
+      <section class="download-card" id="documentation">
+        <h3>Documentation</h3>
+        <p>Download the project documentation as a Word document.</p>
+        <a class="download-button" href="files/documentation.docx" download>
+          Download documentation
+        </a>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    Project files and documentation
+  </footer>
+</body>
+</html>
